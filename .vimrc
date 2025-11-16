@@ -11,3 +11,6 @@ set softtabstop=4
 set ai
 set si
 
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
