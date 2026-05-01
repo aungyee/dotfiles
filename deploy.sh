@@ -13,11 +13,7 @@ linkfiles() {
     ln -sfn "$SCRIPT_DIR/.gitconfig" "$HOME/.gitconfig"
 
     if [[ "$(uname)" == "Linux" ]]; then
-        mkdir -p "$HOME/.config/i3"
-        mkdir -p "$HOME/.config/i3status"
-
-        ln -sfn "$SCRIPT_DIR/.config/i3/config" "$HOME/.config/i3/config"
-        ln -sfn "$SCRIPT_DIR/.config/i3status/config" "$HOME/.config/i3status/config"
+        echo "Do things for Linux"
     fi
 }
 
@@ -29,8 +25,7 @@ unlink() {
     rm "$HOME/.gitconfig"
 
     if [[ "$(uname)" == "Linux" ]]; then
-        rm "$HOME/.config/i3/config"
-        rm "$HOME/.config/i3status/config"
+        echo "Do things for Linux"
     fi
 }
 
