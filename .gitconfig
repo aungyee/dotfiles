@@ -1,6 +1,10 @@
 [user]
 	name = Aung Yee
 	email = lyndon.lso@gmail.com
+[format]
+    signoff = true
+[core]
+    editor = vim
 [merge]
 	conflictStyle = diff3
 [magit]
