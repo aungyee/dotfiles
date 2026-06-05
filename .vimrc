@@ -19,7 +19,7 @@ nnoremap <C-u> <C-u>zz
 
 augroup linux_kernel_style
     autocmd!
-    autocmd BufRead,BufNewFile *.c,*.h call s:LinuxKernelStyle()
+    autocmd BufRead,BufNewFile *.c,*.cpp,*.h call s:LinuxKernelStyle()
 augroup END
 
 function! s:LinuxKernelStyle()
