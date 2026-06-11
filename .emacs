@@ -1,5 +1,18 @@
-(setq custom-file "~/.config/emacs/emacs.custom.el")
-(load custom-file t)
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+(use-package gruber-darker-theme
+  :ensure t)
+
+(use-package magit
+  :ensure t)
+
+(use-package smex
+  :ensure t)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -9,6 +22,9 @@
 (global-display-line-numbers-mode 1)
 
 (ido-mode 1)
+
+(setq custom-file "~/.config/emacs/emacs.custom.el")
+(load custom-file t)
 
 (set-frame-font "Iosevka-14" nil t)
 
