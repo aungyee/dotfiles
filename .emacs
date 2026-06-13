@@ -6,10 +6,27 @@
   :ensure t)
 
 (use-package magit
-  :ensure t)
+  :ensure t
+  :config
+  (with-eval-after-load 'magit-mode
+    (add-hook 'after-save-hook 'magit-after-save-refresh-status t))
+  (setq magit-commit-signoff t))
 
 (use-package smex
   :ensure t)
+
+(use-package which-key
+  :ensure t
+  :config (which-key-mode))
+
+(use-package org-bullets
+  :ensure t
+  :config (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+(add-to-list 'load-path "~/.emacs.local/")
+
+(require 'no-easy-keys)
+(no-easy-keys 1)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -22,6 +39,7 @@
 (global-display-line-numbers-mode 1)
 
 (ido-mode 1)
+(ido-everywhere 1)
 
 (setq custom-file "~/.config/emacs/emacs.custom.el")
 (load custom-file t)

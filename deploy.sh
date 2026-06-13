@@ -20,6 +20,7 @@ linkfiles() {
     ln -sfn "$SCRIPT_DIR/.emacs" "$HOME/.emacs"
     ln -sfn "$SCRIPT_DIR/.config/emacs/emacs.custom.el" "$HOME/.config/emacs/emacs.custom.el"
 
+    ln -s "$SCRIPT_DIR/.emacs.local" "$HOME/.emacs.local"
 
     if [[ "$(uname)" == "Linux" ]]; then
         echo "Do things for Linux"
