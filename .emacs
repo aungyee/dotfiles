@@ -9,8 +9,7 @@
   :ensure t
   :config
   (with-eval-after-load 'magit-mode
-    (add-hook 'after-save-hook 'magit-after-save-refresh-status t))
-  (setq magit-commit-signoff t))
+    (add-hook 'after-save-hook 'magit-after-save-refresh-status t)))
 
 (use-package smex
   :ensure t)
