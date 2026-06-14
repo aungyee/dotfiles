@@ -22,9 +22,6 @@
   :ensure t
   :config (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-(use-package ido-completing-read+
-  :ensure t
-  :config (ido-ubiquitous-mode 1))
 
 (add-to-list 'load-path "~/.emacs.local/")
 
@@ -41,8 +38,14 @@
 
 (global-display-line-numbers-mode 1)
 
+;; ido
+(setq ido-enable-flex-matching t)
 (ido-mode 1)
 (ido-everywhere 1)
+(use-package ido-completing-read+
+  :ensure t
+  :config (ido-ubiquitous-mode 1))
+
 
 (setq custom-file "~/.config/emacs/emacs.custom.el")
 (load custom-file t)
