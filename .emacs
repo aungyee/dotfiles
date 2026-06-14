@@ -14,6 +14,9 @@
 (use-package smex
   :ensure t)
 
+(use-package try
+  :ensure t)
+
 (use-package which-key
   :ensure t
   :config (which-key-mode))
