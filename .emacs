@@ -22,6 +22,10 @@
   :ensure t
   :config (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
+(use-package ido-completing-read+
+  :ensure t
+  :config (ido-ubiquitous-mode 1))
+
 (add-to-list 'load-path "~/.emacs.local/")
 
 (require 'no-easy-keys)
