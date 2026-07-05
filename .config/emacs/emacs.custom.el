@@ -11,8 +11,8 @@
  '(display-line-numbers-type 'relative)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(ace-window gruber-darker-theme ido-completing-read+ magit
-                org-bullets smex try)))
+   '(ace-window expand-region gruber-darker-theme ido-completing-read+
+                magit multiple-cursors org-bullets smex try)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
