@@ -5,6 +5,26 @@
 (use-package gruber-darker-theme
   :ensure t)
 
+(use-package avy
+  :ensure t
+  :init
+  (progn
+    (global-set-key (kbd "M-g w") 'avy-goto-word-1)))
+
+(use-package hl-todo
+  :ensure t
+  :init
+  (progn
+    (global-hl-todo-mode 1)
+    (setq hl-todo-keyword-faces
+          '(("TODO"   . "#FF0000")
+            ("FIXME"  . "#FF0000")
+            ("DEBUG"  . "#A020F0")))
+    (keymap-set hl-todo-mode-map "C-c p" #'hl-todo-previous)
+    (keymap-set hl-todo-mode-map "C-c n" #'hl-todo-next)
+    (keymap-set hl-todo-mode-map "C-c o" #'hl-todo-occur)
+    (keymap-set hl-todo-mode-map "C-c i" #'hl-todo-insert)))
+
 (use-package magit
   :ensure t
   :config
