@@ -1,6 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
+(split-window-horizontally)
 
 (use-package gruber-darker-theme
   :ensure t)
@@ -94,7 +95,7 @@
 (setq custom-file "~/.config/emacs/emacs.custom.el")
 (load custom-file t)
 
-(set-frame-font "Iosevka-14" nil t)
+(set-frame-font "Iosevka-12" nil t)
 
 ;; default coding style
 (setq-default indent-tabs-mode nil)
