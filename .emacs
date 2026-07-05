@@ -19,7 +19,7 @@
     (global-hl-todo-mode 1)
     (setq hl-todo-keyword-faces
           '(("TODO"   . "#FF0000")
-            ("FIXME"  . "#FF0000")
+            ("FIXME"  . "#00FF00")
             ("DEBUG"  . "#A020F0")))
     (keymap-set hl-todo-mode-map "C-c p" #'hl-todo-previous)
     (keymap-set hl-todo-mode-map "C-c n" #'hl-todo-next)
