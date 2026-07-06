@@ -18,9 +18,10 @@
   (progn
     (global-hl-todo-mode 1)
     (setq hl-todo-keyword-faces
-          '(("TODO"   . "#FF0000")
-            ("FIXME"  . "#00FF00")
-            ("DEBUG"  . "#A020F0")))
+          '(("TODO"   . "#FF00FF")
+            ("FIXME"  . "#FF0000")
+            ("DEBUG"  . "#A020F0")
+            ("NOTE"   . "#00FF00")))
     (keymap-set hl-todo-mode-map "C-c p" #'hl-todo-previous)
     (keymap-set hl-todo-mode-map "C-c n" #'hl-todo-next)
     (keymap-set hl-todo-mode-map "C-c o" #'hl-todo-occur)
